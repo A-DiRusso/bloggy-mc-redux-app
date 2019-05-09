@@ -17,15 +17,30 @@ export function createPost(payload) {
         payload,
     };
 }
+// the window is for devleopment and should be 
+//commmented out or removed later
+//it's like littering
+window.createPost = createPost;
 
-export function updatePost() {
+export function updatePost(id, payload) {
     return {
-
+        type: ACTION_UPDATE_POST,
+        payload: {
+            id,
+            ...payload,
+        }
     };
 }
 
-export function deletePost() {
-    return {
+window.updatePost = updatePost;
 
+export function deletePost(id) {
+    return {
+        type: ACTION_DELETE_POST,
+        payload: {
+            id
+        }
     };    
 }
+
+window.deletePost = deletePost;
