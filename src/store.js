@@ -3,7 +3,7 @@ import {
     createStore,
 } from 'redux';
 
-import post from './reducers/post';
+import posts from './reducers/post';
 
 const FREQUENCY = 2000;
 const LS_KEY = 'bloggy-mc-redux';
@@ -12,7 +12,7 @@ const LS_KEY = 'bloggy-mc-redux';
 const rootReducer = combineReducers({
     //pass an object to combined reducers
     //this object should be shaped like your state
-    post, // this is the key in our state
+    posts, // this is the key in our state
 })
 
 //check localStorage for any previously saved app state
